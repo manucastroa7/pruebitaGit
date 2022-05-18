@@ -1,0 +1,143 @@
+/* unidad de medida rem (relativo al html)
+1 rem = 16px;  */
+/* 
+html {
+    font-size: 18px;
+}
+
+p {
+    font-size: 2rem;
+} */
+
+/* unidad de medida em (relativa al contened {
+    or que contiene las etiquetas) */
+
+/* .caja {
+    font-size: 22px
+    ;
+}
+
+p {
+    font-size: 1em;
+} */
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rosybrown;
+
+}
+
+header {
+
+    margin-bottom: 1rem;
+
+}
+
+/* estilos de header */
+header h1 {
+
+    text-align: center;
+
+
+}
+
+/* estilos del menu . Acotdarse para columnas y rows es distinto el justify*/
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    padding: 0.3rem;
+}
+
+/* estilos de main */
+.mainNosotros {
+    height: 70vh;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-areas: "mainP mainP"
+        "imagen1 imagen2"
+        "imagen3 imagen4"
+        "parrafo parrafo";
+    justify-content: center;
+    justify-items: center;
+}
+
+.sectionNosotros {
+    display: none;
+}
+.mainP {
+    grid-area: mainP;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.imagen1 {
+    grid-area: imagen1;
+}
+
+.imagen2 {
+    grid-area: imagen2;
+}
+
+
+.imagen3 {
+    grid-area: imagen3;
+}
+
+
+.imagen4 {
+    grid-area: imagen4;
+}
+
+.parrafo {
+
+    grid-area: parrafo;
+}
+
+/* propiedades del footer */
+
+footer p {
+    text-align: center;
+}
+
+/* mediasqueries */
+
+@media screen and (min-width:600px) {
+
+    .sectionNosotros {
+        display: block;
+        grid-area: pSec;
+    }
+
+    .mainNosotros {
+        height: 80vh;
+        grid-template-areas: "mainP mainP mainP mainP"
+            "pSec pSec pSec pSec"
+            "imagen1 imagen2 imagen3 imagen4"
+            "parrafo parrafo parrafo parrafo";
+        column-gap: 2.5rem;
+
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .mainNosotros {
+        height: 80vh;
+        grid-template-areas: "mainP mainP pSec pSec"
+            "imagen1 imagen2 imagen3 imagen4"
+            "parrafo parrafo parrafo parrafo";
+        column-gap: 2.5rem;
+    }
+
+}
